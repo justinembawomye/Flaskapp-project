@@ -1,0 +1,22 @@
+body{
+    background-color: whitesmoke;
+    width: 1000px;
+    height: 800px;
+
+}
+h1{
+    color:white;
+    background-color: steelblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, Georgia ! important;
+    font-size: 35pt;
+}
+#nav{
+    background-color:white;
+}
+button .btn a{
+color: white;
+}
+h3{
+    background-color: steelblue;
+}
