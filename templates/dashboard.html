@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+<h2>Dashboard <small>Welcome {{session.username}}</small></h2>
+<a href="/add_tasks" class=" btn btn-success ">Add Task</a>
+<hr>
+
+<table class="table table-striped">
+<tr>
+    <th>NO</th>
+    <th>Tittle</th>
+    <th>Author</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+</tr>
+
+
+
+{% for n  in range(tasks | length) %}
+<tr>
+   <td class="count">{{n+1}}</td>
+    <td>{{tasks[n]['title']}}</td>
+    <td>{{tasks[n].author}}</td>
+    <td>{{tasks[n]['create_date']}}</td>
+
+
+    <td><a href="edit_task/{{tasks[n].id}}" class="btn btn-default pull-right">Edit
+        <span class="glyphicon glyphicon-edit"></span>
+        </a>
+    </td>
+
+   
+    <td>
+        <form action="{{url_for('delete_task', id = tasks[n].id)}}",  method ="post">
+           
+            <input type="hidden" name = "_method"value = "DELETE">
+            <span ></span>   
+            <input type="submit" value ="Delete" class="btn btn-danger glyphicon glyphicon-trash">
+         
+        </form>
+    </td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

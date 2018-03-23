@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!--<br><br><h3 class="text-center">Tasks</h3>
+<ul class="list-group">
+    {% for task in articles %}
+    <li class="list-group-item"><a href="article/{{task.id}}">{{ task.body }}</a></li>
+
+    {% endfor %}
+</ul>-->
+<br><h1>{{tasks.title}}</h1><br>
+<small>Written by{{tasks.author }}</small>
+<hr >
+<div>
+    {{tasks.body}}
+</div>
+
+{% endblock %}
