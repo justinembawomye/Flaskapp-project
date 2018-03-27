@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+   <!--<link rel="shortcut icon"
+    href="{{ url_for('static', filename='style.css') }}">-->
+
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/lib/bootstrap.css")}}">
+
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/lib/style.css")}}">
+
+    
+    <title>TODO LIST</title>
+    
+    
+            <!--<style>
+            button{
+                color: aliceblue;
+                padding: 5px;
+            }
+            
+            </style>-->
+
+
+</head>
+<body>
+    {% block body %}
+    <!--<h1>You are here {{firstname}}</h1>-->
+    <div class="container">
+    <div class="header">
+     <h1>Please login to access your tasks</h1>
+     <h1>{{firstname}}</h1>
+    <!--<nav>
+        <ul class="nav nav-pills pull-left">
+            <li role="presentation" class="active"><a href="#">Home</a>
+            </li>
+            <li role="presentation"><a href="#">Sign In</a>
+            </li>
+            <li role="presentation"><a href="showSignUp">Sign Up</a>
+            </li>
+        </ul>
+    </nav>-->
+
+<!--jinja templating engine-->
+
+<!--<p>This loop will print the list alongside the actual html</p>>-->
+
+<!--
+<ul>
+    {% for dog in animals %}
+    <li>{{ dog}}</li>
+    {% endfor %}
+</ul>
+
+<ol>
+    {% for young in sample %}
+    <li>{{young}}</li>
+    {% endfor %}
+</ol>
+-->
+
+
+</div class ="container">
+    <form class="form-group">
+
+        <label>Name:<input type = 'text'placeholder = 'username'class="form-control"></label><br>
+            <!--<label>Email address:<label><input type = 'text'placeholder = 'email'></label><br>-->
+        <label>Password:<br> <input type = 'password'placeholder = 'password'class="form-control" id="password"></label><br>
+
+    </form>
+
+        <form>
+            <input type="button" value="login"class ="btn btn-primary" onclick="window.location.href='/active'" />
+        </form> 
+
+
+    </div>
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

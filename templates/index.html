@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br>
+<h1 class="tex-center">Welcome To Todolist App</h1>
+<p class="text-center lead">This app is going to help you make your daily todo lists easily</p>
+<p class="text-center" id="please">Please register and login</p>
+<div class="text-center">
+{% if session.logged_in == NULL%}
+
+<a href="/register"class="btn btn-primary btn-lg">Register</a>
+<a href="/login"class="btn btn-success btn-lg">login</a>
+
+{% endif %}
+</div>
+
+{% endblock %}

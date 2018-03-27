@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/lib/bootstrap.css")}}">
+
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/lib/style.css")}}">
+
+</head>
+<body>
+    <div class="container" id="nav">
+        <a class= 'navbar-brand'href="#">Todo List App</a>
+    </div>
+       <!--- <ul class="nav navbar-nav navbar">
+                <li><a href="/active">Active tasks</a></li>
+                
+                <li><a href="/completed">Completed tasks</a></li>
+            
+                <li><a href="/tasks">Add task</a>
+                </li>
+
+
+
+              </ul>-->
+              <ul class="nav navbar-nav navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/tasks">Tasks</a></li>
+                </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+
+                {% if session.logged_in %}
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/logout">logout</a></li>
+                
+                {% else %}
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">login</a></li>
+               {% endif %}
+      
+              </ul>
+
+
+</body>
+</html>
